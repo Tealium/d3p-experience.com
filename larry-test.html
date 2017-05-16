@@ -1,0 +1,28 @@
+<html>
+<head>
+<script type="text/javascript">
+    var utag_data = {
+        event_name: 'hello world',
+        var1: 'value 1',
+        var2: 'value 2',
+        _dc_ttl_: "60000" // expire after 60 seconds
+    };
+    var test_javascript_var = 'test variable';
+</script>
+
+<!-- Loading script asynchronously -->
+<script type="text/javascript">
+    (function(a,b,c,d){
+    a='//tags.tiqcdn.com/utag/tealium-dev/larry-test/prod/utag.js';
+    b=document;c='script';d=b.createElement(c);d.src=a;d.type='text/java'+c;d.async=true;
+    a=b.getElementsByTagName(c)[0];a.parentNode.insertBefore(d,a);
+    })();
+    
+    console.log('utag added');
+
+</script>  
+</head>
+<body>
+<h>HELLO!</h>
+</body>
+</html>
